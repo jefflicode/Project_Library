@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Project: Library</title>
+</head>
+<body>
+<div class="container">
+    <div class="greeting">Welcome to Project Library</div>
+
+    <div class="newBookButtonSection">
+        <button class="newBookButton"> Add New Book</button>
+
+    </div>
+    
+
+    <div class="bookTable">
+        <table class="table">
+            <tr>                
+                <th><b>Title</b></th>
+                <th><b>Author</b></th>
+                <th><b>Pages</b></th>
+                <th><b>Read Status</b></th>
+                <th></th>
+            </tr>
+            
+        </table>
+    </div>
+
+    <dialog class="dialogNewBook">
+        <form class=".dialogForm">
+            <!-- https://rocketvalidator.com/html-validation/the-value-of-the-for-attribute-of-the-label-element-must-be-the-id-of-a-non-hidden-form-control -->
+            <label for="inputFormTitle">Title</label>
+            <input type="text" name="title" id="inputFormTitle" required>
+            <label for="inputFormAuthor">Author</label>
+            <input type="text" name="author" id="inputFormAuthor" required>
+            <br>
+            
+            <br>
+            <label for="inputFormPages">Number of Pages</label>
+            <input type="text" name="pages" id="inputFormPages" required>
+            <br>
+
+            <!-- <label for="inputFormRead">Read Status</label>
+            <input type="text" name="read" id="inputFormRead" required>
+            <br> -->
+
+            <fieldset>
+                <legend>Have you read the book yet</legend>
+                <div>
+                  <input type="checkbox" id="inputFormRead" name="yes" value="yes" />
+                  <label for="inputFormRead">Yes</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="inputFormRead" name="no" value="no"  />
+                  <label for="inputFormRead">No</label>
+                </div>
+              </fieldset>
+            
+            <input type="submit" id="dialogSubmit" value="Submit" required/>
+            <button class="dialogCancel">Cancel</button>
+        </form>
+
+    </dialog>
+
+    <!-- regarding the button to remove a book from the library, the spec suggests associating the dom elements with the book object using the index from the library array, but since I pop an element once they get displayed, I can't really depend on the index of the library array. 
+    
+    so I will give the remove button and the tr element the same class/ID name, the button will have a class name and the tr element will have a ID name, the name will be a concatenated string of the book's title and author -->
+    
+</div>
+</body>
+<script src="scripts.js"></script>
+</html>

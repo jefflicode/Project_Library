@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(177, 119, 110);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    /* grid-template-rows: 40px, 50px, repeat(10, 1fr); */
+}
+
+.greeting {
+    grid-column: 1 / 11;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.newBookButtonSection {
+    grid-column: 1 / 11;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.newBookButton  {
+    grid-column: 5 / 6;
+    grid-row: 1 / 2;
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-color: #0066b2;
+    border: solid;
+    border-radius: 9px;
+    border-color: white;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.bookTable {
+    grid-column: 1 / 11;
+    grid-row: 5 / 6;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+table, th, td {
+    /* border:5px solid white;
+    border-collapse: collapse; */
+    width: 900px;
+    text-align: center;
+    /* border: none; */
+}
+
+/* th, td {
+    border-bottom: 1px solid;
+  } */
+
+
+th {
+    font-size: 30px;
+}
+
+td {
+    border: 3px solid white;
+    font-size: 20px;
+}
+
+td:last-child {
+    border: none;
+}
+
+td:nth-child(5) {
+    border: none;
+}
