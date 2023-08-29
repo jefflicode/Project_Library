@@ -48,7 +48,7 @@ function displayLibraryBook(myLibrary) {
     const read = document.createElement("td");
     read.textContent = book.read;
     const newBookClassName = `${book.title}${book.author}`;
-    read.classList.add(newBookClassName.split(" ").join(""));
+    read.classList.add(newBookClassName.split(" ").join("").replace(/\W/g, ''));
 
     newBook.appendChild(read);
     
@@ -82,7 +82,7 @@ function displayLibraryBook(myLibrary) {
     });
     changeReadStatusButton.textContent = "change read status";
     changeReadStatusButton.onclick = changeReadStatus;
-    changeReadStatusButton.setAttribute("id", newBookClassName.split(" ").join(""));
+    changeReadStatusButton.setAttribute("id", newBookClassName.split(" ").join("").replace(/\W/g, ''));
     changeReadStautsButtonRow.appendChild(changeReadStatusButton);
     newBook.appendChild(changeReadStautsButtonRow);
 
